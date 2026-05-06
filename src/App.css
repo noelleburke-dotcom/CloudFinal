@@ -1,4 +1,4 @@
-.container {
+\.container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
@@ -7,7 +7,7 @@
 
 h1 {
   text-align: center;
-  color: hsl(274, 75%, 60%);
+  color: #333;
   margin-bottom: 30px;
 }
 
@@ -40,7 +40,7 @@ h1 {
 .add-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: hwb(166 27% 7%);
+  background-color: #4a90e2;
   color: white;
   border: none;
   border-radius: 5px;
@@ -63,15 +63,15 @@ h1 {
   gap: 10px;
   padding: 15px;
   margin-bottom: 10px;
-  background-color: hwb(178 42% 13%);
+  background-color: #f9f9f9;
   border-radius: 5px;
   border: 1px solid #eee;
 }
 
 .task-text {
   flex: 1;
-  font-size: 18px;
-  color: hsl(283, 91%, 63%);
+  font-size: 16px;
+  color: #333;
 }
 
 .delete-button {
