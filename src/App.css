@@ -1,26 +1,44 @@
-\.container {
-  max-width: 600px;
+body {
+  margin:0;
+  background: hsl(188, 86%, 75%);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
   margin: 50px auto;
   padding: 20px;
+  background: white;
+  border-radius: 10px;
   font-family: system-ui, -apple-system, sans-serif;
+  background-color: white;
+}
+
+.main-container{
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
 }
 
 h1 {
+  font-size: 80px;
   text-align: center;
-  color: #333;
-  margin-bottom: 30px;
+  color: #333333;
+  margin-bottom: 40px;
 }
 
 .add-task-form {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .task-input {
   flex: 1;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 15px 15px;
+  font-size: 20px;
   border: 2px solid #ddd;
   border-radius: 5px;
   outline: none;
@@ -38,18 +56,23 @@ h1 {
 
 
 .add-button {
+  display: block;
+  margin: 0 auto;
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4a90e2;
+  font-size: 25px;
+  background-color: hwb(119 54% 2%);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 120px;
+  height: 40px;
+  align-items: center;
 }
 
 .add-button:hover {
-  background-color: #357abd;
+  background-color: hsl(142, 75%, 58%);
 }
 
 .task-list {
@@ -61,6 +84,8 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 40px;
+  width: 400px;
   padding: 15px;
   margin-bottom: 10px;
   background-color: #f9f9f9;
@@ -70,7 +95,7 @@ h1 {
 
 .task-text {
   flex: 1;
-  font-size: 16px;
+  font-size: 40px;
   color: #333;
 }
 

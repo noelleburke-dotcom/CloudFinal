@@ -39,21 +39,10 @@ function App() {
   // ==== JSX that gets returned =====
   return (
     <div className="container">
-      <h1>My To Do List</h1>
-      <form onSubmit={handleAddTask} className="add-task-form">
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Add a task..."
-          className="task-input"
-        />
-        <button type="submit" className="add-button">
-          Add
-        </button>
-      </form>
-
-      <ul className="task-list">
+      <h1>To Do List</h1>
+      <div className="main-container">
+        <div className="task-container">
+          <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className="task-item">
             <input 
@@ -67,13 +56,29 @@ function App() {
               className="delete-button"
               onClick={() => handleDelete(index)}
             >
-              🗑️
+              Done!
             </button>
           </li>
         ))}
       </ul>
     </div>
-  );
+      <div className="add-container">
+        <form onSubmit={handleAddTask} className="add-task-form">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Add a task..."
+          className="task-input"
+        />
+        <button type="submit" className="add-button">
+          Add
+        </button>
+      </form>
+    </div>
+    </div>
+  </div>
+  );  
 }
 
 export default App;
