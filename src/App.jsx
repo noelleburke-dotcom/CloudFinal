@@ -4,10 +4,9 @@ import "./App.css";
 function App() {
   // ===== Use State Variables =====
   const [tasks, setTasks] = useState([
-    {text:"Project 1",completed:false},
-    {text:"Laundry",completed:false},
-    {text:"Walk Dogs",completed: false},
-    {text:"clean room", completed: false},
+    {text:"Cloud Final",completed:false},
+    {text:"Record Video",completed: false},
+    {text:"Study for final", completed: false},
   ]);
   const [inputValue, setInputValue] = useState("");
 
@@ -25,15 +24,7 @@ function App() {
     setTasks(tasks.filter((_, index) => index !== indexToDelete));
   };
 
-  const handleToggle = (indexToToggle) => {
-    setTasks(
-      tasks.map((task, index) => 
-        index=== indexToToggle
-          ?{ ...task,completed: !task.completed}
-          :task
-)
-    );
-  };
+
 
 
   // ==== JSX that gets returned =====
@@ -45,11 +36,7 @@ function App() {
           <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className="task-item">
-            <input 
-              type="checkbox" 
-              checked={task.completed}  // or false
-              onChange={() => { handleToggle(index) }}
-            />
+            
             <span className= {task.completed? "task-text completed":"task-text"}>
               {task.text} </span>
             <button
