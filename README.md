@@ -1,6 +1,5 @@
  # AWS Amplify to do app 
- sources used
- https://moderncss.dev/pure-css-custom-checkbox-style/
+
 
 # React + Vite
 
